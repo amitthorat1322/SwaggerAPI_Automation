@@ -1,0 +1,86 @@
+{
+	
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"bookingid",
+		"booking"
+	],
+	
+	"properties": {
+		"bookingid": {
+			"title": "Bookingid", 
+			"type": "integer",
+			"default": 0
+		},
+		"booking": {
+			"title": "Booking", 
+			"type": "object",
+			"required": [
+				"firstname",
+				"lastname",
+				"totalprice",
+				"depositpaid",
+				"bookingdates",
+				"additionalneeds"
+			],
+			"properties": {
+				"firstname": {
+					"title": "Firstname", 
+					"type": "string",
+					"default": "",
+					"pattern": "^.*$"
+				},
+				"lastname": {
+					"title": "Lastname", 
+					"type": "string",
+					"default": "",
+					"pattern": "^.*$"
+				},
+				"totalprice": {
+					"title": "Totalprice", 
+					"type": "integer",
+					"default": 0
+				},
+				"depositpaid": {
+
+					"title": "Depositpaid", 
+					"type": "boolean",
+					"default": true
+				},
+				"bookingdates": {
+					"title": "Bookingdates", 
+					"type": "object",
+					"required": [
+						"checkin",
+						"checkout"
+					],
+					"properties": {
+						"checkin": {
+				
+							"title": "checkin", 
+							"type": "string",
+							"default": "",
+							"pattern": "^.*$"
+						},
+						"checkout": {
+							"title": "checkout", 
+							"type": "string",
+							"default": "",
+							"pattern": "^.*$"
+						}
+					}
+				}
+,
+				"additionalneeds": {
+			
+					"title": "Additionalneeds", 
+					"type": "string",
+					"default": "",
+					"pattern": "^.*$"
+				}
+			}
+		}
+
+	}
+}
